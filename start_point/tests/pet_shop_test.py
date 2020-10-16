@@ -115,6 +115,7 @@ class TestPetShop(unittest.TestCase):
     def test_all_pets_by_breed__found(self):
         pets = get_pets_by_breed(self.cc_pet_shop, "British Shorthair")
         self.assertEqual(2, len(pets))
+    
 
     @unittest.skip("delete this line to run the test")
     def test_all_pets_by_breed__not_found(self):

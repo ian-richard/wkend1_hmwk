@@ -1,3 +1,4 @@
+import  pdb
 # 1
 def get_pet_shop_name(dict):
     return dict["name"]
@@ -28,12 +29,18 @@ def increase_pets_sold(dict, pet_num):
 def get_stock_count(dict):
     return len(dict["pets"])
 #7
-def get_pets_by_breed(dict, breed):
-    return len(dict[breed])
+def get_pets_by_breed(pet_shop, pet_breed):
+    pets_list = []
+    for pet in pet_shop["pets"]:
+        if pet["breed"] == pet_breed:
+            pets_list.append(pet)
+    return pets_list
 
 
+    # pdb.set_trace()
+    # pets = []
+    # for item in dict:
+    #     if item["breed"] == pet_breed:
+    #         pets.append(item["breed"])
 
-     
-
-
-
+            
